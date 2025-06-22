@@ -1,6 +1,8 @@
 import importlib.resources as pkg_resources
 
 from .mapping import MappingManager, Mapping
+from .lm import LanguageModelManager, LanguageModel
+from pyvinorm.utils.downloader import GhReleaseDownloader
 
 
 def init_resources():
@@ -14,3 +16,6 @@ def init_resources():
                 MappingManager.register_mapping(
                     mapping_name, Mapping.from_file(str(path))
                 )
+
+    filepath = GhReleaseDownloader("v0.2.0").download("trigram-v1.0.bin")
+    LanguageModelManager.register_language_model(LanguageModel.from_file(filepath))

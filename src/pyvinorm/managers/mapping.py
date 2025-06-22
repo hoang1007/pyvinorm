@@ -2,8 +2,10 @@ import logging
 
 from typing import Dict, Optional
 from threading import Lock, Thread
+from .lm import LanguageModelManager
 
 logger = logging.getLogger(__name__)
+
 
 class Mapping:
 
@@ -20,9 +22,12 @@ class Mapping:
         with open(file_path, "r", encoding="utf-8") as file:
             for line in file:
                 key, value = line.strip().split(delimiter)
-                mapping.__map[key] = value
+                if key in mapping.__map:
+                    mapping.__map[key] += (value,)
+                else:
+                    mapping.__map[key] = (value,)
         return mapping
-    
+
     @staticmethod
     def combine(*mappings: "Mapping") -> "Mapping":
         """
@@ -34,10 +39,16 @@ class Mapping:
         combined = Mapping()
         combined.__map = {}
         for mapping in mappings:
-            combined.__map.update(mapping.__map)
+            for key in mapping.__map.keys():
+                if key in combined.__map:
+                    combined.__map[key] += mapping.__map[key]
+                else:
+                    combined.__map[key] = mapping.__map[key]
         return combined
 
-    def get(self, key: str, default: Optional[str] = None, raise_error: bool = True) -> str:
+    def get(
+        self, key: str, default: Optional[str] = None, raise_error: bool = True
+    ) -> str:
         """
         Get the value for a given key.
 
@@ -46,7 +57,41 @@ class Mapping:
         """
         if default is not None:
             raise_error = False
-        return self.__map[key] if raise_error else self.__map.get(key, default)
+        if key in self.__map:
+            assert (
+                len(self.__map[key]) == 1
+            ), "Multiple values found for key. Use get_with_context() instead."
+            return self.__map[key][0]
+        if raise_error:
+            raise KeyError(f"Key '{key}' not found in mapping.")
+        return default
+
+    def get_with_context(self, key: str, context: str, fallback: str) -> str:
+        """
+        Retrieve the value associated with a given key, considering the provided context.
+        This method uses a LanguageModel to estimate the probability of potential values given the context.
+        The fallback value is included as one of the possible candidates.
+        The value with the highest estimated probability is returned.
+        If the key does not exist, the fallback value is returned.
+
+        :param key: The key to look up.
+        :param context: The context used to evaluate the likelihood of potential values.
+        :param fallback: The fallback value.
+        :return: The value with the highest estimated likelihood given the context.
+        """
+        lm = LanguageModelManager.get_language_model()
+        if key in self.__map:
+            values = self.__map[key] + (fallback,)
+            max_score = float("-inf")
+            best_value = fallback
+
+            for value in values:
+                score = lm.cond_score(value, context)
+                if score > max_score:
+                    max_score = score
+                    best_value = value
+            return best_value
+        return fallback
 
     def contains(self, key: str) -> bool:
         """
