@@ -18,6 +18,9 @@ A package for normalizing Vietnamese text into its spoken form. Based on [vinorm
 - ⚙️ pyvinorm supports multi-threading and multi-processing.
 - 📦 pyvinorm is a pure Python package, make it simple to integrate into any workflows.
 
+## What's new
+- In version 0.2.0, pyvinorm introduces context-based abbreviation replacement, enabling accurate identification of the correct full form for acronyms with multiple possible meanings. For example: `vòng ck` is expanded to `vòng chung kết`, while `thị trường ck` becomes `thị trường chứng khoán`.
+
 ## Installation
 To install vinorm run the following command:
 ```bash
