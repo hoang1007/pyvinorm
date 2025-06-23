@@ -429,7 +429,9 @@ chtw#chấp hành trung ương
 chxh#cộng hòa xã hội
 chxhcn#cộng hòa xã hội chủ nghĩa
 chxhcnvn#cộng hòa xã hội chủ nghĩa việt nam
+ck#chồng
 ck#chung kết
+ck#chứng khoán
 cknn#chứng khoán nhà nước
 cktt#chiết khấu thanh toán
 ckvn#chứng khoán việt nam
@@ -3387,6 +3389,7 @@ vhttdl#văn hóa thể thao du lịch
 vhttdt#văn hóa thể dục thể thao
 vhtttn#văn hóa thể thao thanh niên
 vhvn#văn học việt nam
+vk#vợ
 vkhhs#viện khoa học hình sự
 vkhktnnmn#viện khoa học kỹ thuật nông nghiệp miền nam
 vkhtt#viện khoa học thanh tra
