@@ -3,12 +3,12 @@
 [![codecov](https://codecov.io/gh/hoang1007/pyvinorm/graph/badge.svg?token=m92tyscd3b)](https://codecov.io/gh/hoang1007/pyvinorm)
 [![image](https://img.shields.io/pypi/v/pyvinorm.svg)](https://pypi.python.org/pypi/pyvinorm)
 
-A package for normalizing texts into their spoken form. Based on [vinorm](https://github.com/v-nhandt21/vinorm_cpp_version.git), re-writen in Python.
+A package for normalizing Vietnamese text into its spoken form. Based on [vinorm](https://github.com/v-nhandt21/vinorm_cpp_version.git), re-writen in Python.
 
 <p align="center">
   <picture align="center">
     <source media="(prefers-color-scheme: dark)" srcset="./assets/benchmark_dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/benchmark_dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/benchmark_light.svg">
     <img src="./assets/benchmark_dark.svg">
   </picture>
 </p>
