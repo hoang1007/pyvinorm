@@ -19,9 +19,9 @@ A package for normalizing Vietnamese text into its spoken form. Based on [vinorm
 - 📦 pyvinorm is a pure Python package, make it simple to integrate into any workflows.
 
 ## Installation
-Installing pyvinorm is easy with pip. Just run the following command:
+To install vinorm run the following command:
 ```bash
-pip install pyvinorm
+pip install git+https://github.com/hoang1007/pyvinorm.git
 ```
 
 ## Usage
