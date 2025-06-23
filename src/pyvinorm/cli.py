@@ -41,7 +41,7 @@ def main():
     )
     text = args.text.strip()
     normalized_text = normalizer.normalize(text)
-    print(normalized_text + "|")
+    print(normalized_text)
 
 
 # def main() -> None:
