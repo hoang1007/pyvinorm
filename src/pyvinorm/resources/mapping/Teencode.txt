@@ -1,42 +1,162 @@
-bạk#bạch
-bưc#bức
-bùl#buồn
-nếnh#nến
-byt#buýt
-cak#cách
-cẻ#kể
-cẻ#kẻ
-cik#kinh
-oxi#ô xi
-oxy#ô xi
+achuếch#a chết
+adốt#a dốt
+adrâng#a rân
+ah#a
+ali#a li
+anu#a nu
+atul#a tu
 axit#a xít
+ayun#a un
+bạk#bạch
+balamon#bà la môn
+băc#bắc
+bicu#bi cu
+bing#binh
+bít#biết
+blai#bờ lai
+blao#bờ lao
+blinh#bờ linh
+blo#bờ lo
+bloong#bờ lông
+blui#bờ lui
+bluông#bờ luông
+b'nahria#bờ na ri a
+bobo#bo bo
+bondưng#bon dưng
+boóc#bóc
+brạo#bờ rạo
+brâu#bờ râu
+bru#bờ ru
+bruốt#bờ ruốc
+bùl#buồn
+buon#buôn
+busor#bu so
+bưc#bức
+byt#buýt
+cado#ca do
+cak#cách
+camau#ca mau
+catơ#ca tơ
+cẻ#kẻ
+cẻ#kể
+chại#chạy
+chama#cha ma
+chéng#chén
+chìn#chình
+chip#chíp
+chnăm#chờ năm
+choá#cho á
+chom#chôm
+choong#chông
+chrau#chờ rau
+chro#chờ ro
+chứt#chức
+chưnđre#chưng re
+cik#kinh
 cín#kín
 cìw#kiều
+cởng#cỡn
 côt#cốt
+cri#cờ ri
+cru#cờ ru
+cùa#cùa
 cũg#cũng
+cu-mưng#cu mưng
 dáh#đánh
+dak#đắc
+dap#dáp
 dấy#đấy
+dẹ#de
+déo#déo
+dín#dính
 dìw#điều
 dồ#đồ
-dôg#đông
 dọg#đọng
 dớn#đớn
+dôg#đông
+dơng#dương
+dửn#dửng
+duon#dương
+duot#dượt
+duyền#duyên
 dừz#đường
+đắk#đắc
+đakriêng#đa riêng
+đazur#đa giu
+đăc#đắc
+đăk#đắc
+đăt#đắc
+đech#đếch
+đện#điện
+đêr#đê
+đim#dim
+đing#đinh
+đlie#đờ li ê
+đnẹ#đờ nẹ
+đôp#đốp
+đrá#ra
+đrang#đờ rang
+đựoc#được
+đuổng#đuông
+đuốt#đuốc
+đựơc#được
+đưngur#đư gu
+đwai#đờ quai
+Ea#e a
+eban#ê ban
+eli#e li
+eman#ê man
+emo#ê mo
+enoul#ê no
+epan#ê ban
+êđe#ê đê
+êđê#ê đê
 fẳg#phẳng
 fải#phải
 fân#phân
+fb#facebook
 fố#phố
 fog#phong
-fưz#phương
 fựz#phượng
+fưz#phương
+gah#ga
+gar#ga
 ge#ghe
 gế#ghế
 gen#ghen
+gioảng#gioảng
+glava#la va
+glơ#lơ
+goi#goi
+hăr#ha
+hđok#hờ đo
+h'hen#hờ hen
+hieo#hi eo
+hiùnh#huỳnh
+H’leo#hờ leo
+hlinh#hờ linh
+hmok#hờ móc
+h'mong#hờ mông
+h'mông#hờ mông
+h'nei#hờ nây
+hoà#hòa
 hồg#hồng
+hoóng#hóng
+hot#hót
+hrê#hờ rê
+hrue#hờ ru
+hua#hua
+huây#hay
+hut#hút
+inđra#in ra
+inra#in ra
 ja#gia
-já#giá
+ja#gia
 jà#già
+já#giá
+jan#gian
 jấy#giấy
+jdrong#dờ rong
 jì#gì
 jìn#gìn
 jờ#giờ
@@ -44,440 +164,320 @@ jở#giở
 jòg#giòng
 jù#dù
 jữ#giữ
+k#không
+kazá#ca giá
 kăn#khăn
+kây#cây
+k'bao#cờ bao
+k'bình#cờ bình
+kbla#cờ la
+kdun#cờ du
+kđăm#cờ đăm
 ken#khen
+kêr#kê
+khạ#cạ
+khằm#cờ hằm
+khêmara#khê ma ra
+khmer#khờ me
+k'ho#cờ ho
+khrâm#khờ râm
+khun#cờ hun
+khuống#cờ huống
+klảng#cờ lãng
+klăn#cờ lăn
+kmang#cờ mang
+kmụ#cờ mụ
+knul#cờ nu
+ko#không
 kó#khó
+kontum#con tum
+kor#co
 kôg#không
+kôt#cốt
+kơ#cơ
+kơpa#cơ ba
+kơsa#cơ sa
+kpă#cờ pa
+kpor#cờ bo
+kra#cờ ra
+kreng#cờ reng
+kriêng#cờ riêng
+krlự#cờ lự
+krom#cờ rom
+krong#cờ rong
+kroong#cờ rong
+krung#cờ run
+ksei#cờ xây
+ksor#cờ so
+ksơr#cờ sơ
+ktla#cờ ta la
+k'tol#cờ to
+ktub#cờ tu
+ktul#cờ tu
+kúm#cúm
+kut#cút
+kuyênh#khuy en
+kưmbur#cơ bu
+k'va#cờ va
+k'xing#cờ xinh
 lặg#lặng
+lak#lắc
+lắk#lắc
+laoang#lao ang
+lar#la
+lăk#lắc
+lăp#lắp
+lềm#lềnh
+lêp#lép
+lich#lít
+lieng#li en
+liênghót#liêng hót
+lip#líp
+lòai#loài
+lọai#loại
 lòg#lòng
+lok-ly#lo ly
+lot#lót
+lỗu#lỗ
+lờy#lời
+lơmu#lơ mu
+lơng#lơn
+lưk#lư
 lỵ#luỵ
+lya#li a
+maha#ma ha
+mán#máng
+mar#ma
+mbre#mờ re
+mbuôn#mờ buôn
+mđrang#mờ rang
 mệh#mệnh
+m'hơi#mờ hơi
 mih#minh
+mjao#mi ao
+mla#mờ la
+mlo#mờ lo
+m'nông#mờ nông
+mớí#mới
+mok#móc
+mousa#mô sa
+mơlam#mơ lam
 mừi#mười
 mul#muôn
+mùn#mùng
+nđnok#đờ nóc
+nđu#nờ đu
+neang#nang
+nệnh#nện
+nếnh#nến
 net#nét
+nêang#nê ang
 nge#nghe
 ngề#nghề
+nghiã#nghĩa
 ngĩ#nghĩ
 ngil#nghiên
-H’leo#hờ leo
-Ea#e a
 ngòj#ngoài
 ngọj#ngoại
 ngừj#người
+nguỵ#ngụy
+nhâp#nhấp
+nhiêng#nhiên
 nhiw#nhiêu
-nhưg#nhưng
 nhữg#những
+nhưg#nhưng
+nie#ni ê
+niễu#niễu
+niê#ni ê
+nim#nim
+nìu#nhìu
+noang#non
+noóc#nóc
+n'tor#nờ to
+ntor#nờ to
+nủ#nhủ
 nup#núp
+nuth#nút
+nưóc#nước
+oh#ồ
+oivê#ô vê
+oóc#óc
+oxi#ô xi
+oxy#ô xi
+ôc#ốc
 ôg#ông
+ơiii#ơi
+pá#bá
+pạ#bạ
+palei#ba lây
+paleng#ba len
+pàn#bàn
+pang#bang
+panth#ban
+páo#báo
+pặp#bặp
+paseng#ba sen
+patra#pa tra
+pầu#bầu
+paungtin#bau tin
+pâu#bâu
+pé#bé
+pế#bế
+pem#bem
+péo#béo
+phén#phéng
+phia#khuya
+phìâ#phì
+phok#phóc
+phum#phun
+plây#bờ lây
+plei#bờ lây
+pleiku#bờ lây cu
+plup#lu
+pnông#bờ nông
+pố#bố
+pờ#bờ
+pọng#bọng
+pooc#bốc
+poọng#bọng
+pột#bột
+prong#bờ rông
+proong#bờ rong
+prông#bờ rong
+pu#bu
+pú#bú
+pui#bui
+pún#bún
+pupo#bu bo
+pươi#bươi
 qa#qua
 qan#quan
 qay#quay
 qen#quen
-qên#quên
 qệt#quyệt
+qên#quên
 qý#quý
+rađe#ra đe
+raglai#ra lai
+raglei#ra lây
+rah#ra
+rahlan#ra lan
+rche#rờ che
+rchil#rờ chiêu
+rchom#rờ chôm
+rglê#rờ lê
+rhadé#ra dé
+riăm#ri am
+rit#rít
+rmah#rờ ma
 rồg#rồng
-tăc#tắc
+roong#rong
+roy#rồi
+rơon#rơ on
+rơô#rơ ô
+rsiu#rờ siu
+rudra#ru ra
+rvai#rờ vai
+samách#sa mách
+sampôt#sam bốt
+sara#sa ra
+sarem#sa rem
+saư#sa ư
+sèn#xèn
+séng#xén
+sếnh#sến
+sieng#si yên
+sìn#xìn
+slay#sờ lây
+sli#sờ li
+slử#sờ lử
+sok#sóc
+soong#song
+sor#so
+sôp#sốp
+sơao#sơ ao
+sree#sờ re
+srê#sờ rê
+srúc#sờ rúc
+sruk#sờ ru
+sủn#sủng
+sur#su
+sưr#sư
 tak#tách
+tăc#tắc
+tẻn#tẽn
+tgooc#tờ gốc
+thak#then
+thằm#thằm
+thày#thầy
+thăk#thắc
+thớp#thớt
+thràng#tờ ràng
+thuỷ#thủy
 thừz#thường
+thưở#thuở
+thưr#thư
 thý#thuý
+tiác#ti ác
+tich#tích
 tih#tinh
 tìh#tình
 tĩh#tĩnh
+ting#tinh
+tlắp#tờ lắp
+tlăp#tờ lắp
+tlê#tờ lê
+tloc#tờ lóc
+tmoong#tờ mông
+toong#tông
+tờrông#tờ rông
+tôc#tóc
+tơr#tơ
+trc#trước
+triek#trét
 trìw#triều
+trớc#trước
 trog#trong
 trồg#trồng
 trug#trung
 trưs#trước
 trỳl#truyền
+tsong#tờ song
+tul#tu
+tuprông#tu rông
+tuúp#túp
+tuỳ#tùy
+tvạ#tờ vạ
 tyd#tuyết
+uc#úc
+unh#ừ
 vàg#vàng
 vắg#vắng
+veng#ven
 vid#viết
+viêt#viết
 vil#viên
+vmăk#vờ mắc
+vủ#vũ
 vữg#vững
 vưz#vương
+won#quan
 xah#xanh
+xatra#sa tra
+xeng#xen
+xlooc#sờ lóc
+xoè#xòe
+xơlang#sơ lang
+xtiêng#ti en
+yah#da
+yang#giang
+yàng#giàng
+ysa#i sa
+yung#giun
+zàng#giàng
+zanh#gianh
 zâu#dâu
+zhang#giang
 zì#dì
 zo#do
 zự#dự
-roy#rồi
-oh#ồ
-ko#không
-k#không
-trc#trước
-ơiii#ơi
-bít#biết
-fb#facebook
-chứt#chức
-khmer#khờ me
-brâu#bờ râu
-bru#bờ ru
-kor#co
-k'ho#cờ ho
-hrê#hờ rê
-m'nông#mờ nông
-xtiêng#ti en
-h'mong#hờ mông
-péo#béo
-rhadé#ra dé
-raglai#ra lai
-raglei#ra lây
-noang#non
-laoang#lao ang
-paleng#ba len
-xơlang#sơ lang
-toong#tông
-pọng#bọng
-glơ#lơ
-lar#la
-plây#bờ lây
-pleiku#bờ lây cu
-yang#giang
-thưr#thư
-thớp#thớt
-yung#giun
-blui#bờ lui
-blinh#bờ linh
-nhiêng#nhiên
-đim#dim
-đech#đếch
-tôc#tóc
-brạo#bờ rạo
-kontum#con tum
-srúc#sờ rúc
-cùa#cùa
-chro#chờ ro
-chrau#chờ rau
-bicu#bi cu
-sree#sờ re
-bondưng#bon dưng
-đazur#đa giu
-đakriêng#đa riêng
-đưngur#đư gu
-kơ#cơ
-kdun#cờ du
-kơpa#cơ ba
-kơsa#cơ sa
-kra#cờ ra
-zanh#gianh
-k'tol#cờ to
-liênghót#liêng hót
-paungtin#bau tin
-rglê#rờ lê
-rơô#rơ ô
-rơon#rơ on
-sarem#sa rem
-sơao#sơ ao
-srê#sờ rê
-lơmu#lơ mu
-kroong#cờ rong
-tuprông#tu rông
-nim#nim
-mơlam#mơ lam
-achuếch#a chết
-adốt#a dốt
-nđnok#đờ nóc
-prông#bờ rong
-proong#bờ rong
-bluông#bờ luông
-bruốt#bờ ruốc
-đuốt#đuốc
-kriêng#cờ riêng
-bloong#bờ lông
-choong#chông
-unh#ừ
-plei#bờ lây
-pooc#bốc
-lêp#lép
-h'nei#hờ nây
-ah#a
-kúm#cúm
-kmụ#cờ mụ
-rvai#rờ vai
-veng#ven
-lắk#lắc
-tlắp#tờ lắp
-đêr#đê
-tmoong#tờ mông
-tiác#ti ác
-goi#goi
-oivê#ô vê
-mar#ma
-kưmbur#cơ bu
-thràng#tờ ràng
-tgooc#tờ gốc
-xlooc#sờ lóc
-tlê#tờ lê
-chưnđre#chưng re
-tloc#tờ lóc
-klảng#cờ lãng
-glava#la va
-tvạ#tờ vạ
-tờrông#tờ rông
-blai#bờ lai
-niễu#niễu
-soong#song
-lip#líp
-ôc#ốc
-tlăp#tờ lắp
-krlự#cờ lự
-đnẹ#đờ nẹ
-blao#bờ lao
-sôp#sốp
-huây#hay
-k'va#cờ va
-k'bình#cờ bình
-h'mông#hờ mông
-gioảng#gioảng
-chìn#chình
-nệnh#nện
-lot#lót
-pàn#bàn
-kây#cây
-gar#ga
-kuyênh#khuy en
-prong#bờ rông
-riăm#ri am
-dak#đắc
-pnông#bờ nông
-lak#lắc
-sưr#sư
-bing#binh
-busor#bu so
-đôp#đốp
-krong#cờ rong
-đrang#đờ rang
-ja#gia
-lieng#li en
-hot#hót
-đing#đinh
-lưk#lư
-mbuôn#mờ buôn
-mđrang#mờ rang
-mok#móc
-nđu#nờ đu
-n'tor#nờ to
-pang#bang
-pé#bé
-sur#su
-ting#tinh
-tsong#tờ song
-mbre#mờ re
-phok#phóc
-rche#rờ che
-rchil#rờ chiêu
-lăk#lắc
-sruk#sờ ru
-tơr#tơ
-triek#trét
-vmăk#vờ mắc
-ntor#nờ to
-pột#bột
-kêr#kê
-hăr#ha
-plup#lu
-khạ#cạ
-chại#chạy
-poọng#bọng
-k'xing#cờ xinh
-đrá#ra
-kmang#cờ mang
-zàng#giàng
-vủ#vũ
-pầu#bầu
-pu#bu
-sủn#sủng
-hua#hua
-sli#sờ li
-pờ#bờ
-sèn#xèn
-dín#dính
-slử#sờ lử
-slay#sờ lây
-phén#phéng
-tẻn#tẽn
-mùn#mùng
-mán#máng
-lya#li a
-pạ#bạ
-paseng#ba sen
-pế#bế
-sìn#xìn
-pún#bún
-chéng#chén
-zhang#giang
-déo#déo
-đện#điện
-lăp#lắp
-cru#cờ ru 
-cado#ca do
-kôt#cốt
-b'nahria#bờ na ri a
-lơng#lơn
-k'bao#cờ bao
-m'hơi#mờ hơi
-rchom#rờ chôm
-rsiu#rờ siu
-rmah#rờ ma
-ksor#cờ so
-rahlan#ra lan
-hieo#hi eo
-kpă#cờ pa
-kbla#cờ la
-ksơr#cờ sơ
-kreng#cờ reng
-bobo#bo bo
-pupo#bu bo
-kazá#ca giá
-camau#ca mau
-chama#cha ma
-chip#chíp
-catơ#ca tơ
-anu#a nu
-xeng#xen
-séng#xén
-saư#sa ư
-chom#chôm
-dẹ#de
-pươi#bươi
-lok-ly#lo ly
-pá#bá
-duyền#duyên
-pâu#bâu
-páo#báo
-pố#bố
-dửn#dửng
-nìu#nhìu
-nghiã#nghĩa
-cởng#cỡn
-băc#bắc
-đăt#đắc
-tich#tích
-viêt#viết
-thưở#thuở
-lich#lít
-niê#ni ê
-kđăm#cờ đăm
-h'hen#hờ hen
-hoà#hòa
-rađe#ra đe
-krung#cờ run
-ktul#cờ tu
-đlie#đờ li ê
-epan#ê ban
-êđê#ê đê
-thày#thầy
-yàng#giàng
-choá#cho á
-gah#ga
-êđe#ê đê
-mớí#mới
-adrâng#a rân
-ayun#a un
-tul#tu
-atul#a tu
-buon#buôn
-yah#da
-duot#dượt
-eban#ê ban
-rah#ra
-eman#ê man
-emo#ê mo
-enoul#ê no
-hđok#hờ đo
-hrue#hờ ru
-hmok#hờ móc
-jdrong#dờ rong
-ktub#cờ tu
-knul#cờ nu
-kpor#cờ bo
-ktla#cờ ta la
-mjao#mi ao
-mlo#mờ lo
-duon#dương
-hut#hút
-ksei#cờ xây
-nie#ni ê
-blo#bờ lo
-dap#dáp
-rit#rít
-mla#mờ la
-sieng#si yên
-sor#so
-sok#sóc
-hlinh#hờ linh
-palei#ba lây
-samách#sa mách
-maha#ma ha
-rudra#ru ra
-inra#in ra
-patra#pa tra
-inđra#in ra
-sara#sa ra
-cri#cờ ri
-lờy#lời
-lỗu#lỗ
-đựoc#được
-klăn#cờ lăn
-thăk#thắc
-thak#then
-eli#e li
-đwai#đờ quai
-lòai#loài
-won#quan
-kut#cút
-pui#bui
-đắk#đắc
-đăk#đắc
-ali#a li
-mousa#mô sa
-ysa#i sa
-nguỵ#ngụy
-uc#úc
-xoè#xòe
-pặp#bặp
-khun#cờ hun
-khuống#cờ huống
-khằm#cờ hằm
-lềm#lềnh
-phia#khuya
-tuỳ#tùy
-cu-mưng#cu mưng
-phìâ#phì
-thuỷ#thủy
-hoóng#hóng
-lọai#loại
-jan#gian
-tuúp#túp
-nưóc#nước
-noóc#nóc
-roong#rong
-đăc#đắc
-đuổng#đuông
-thằm#thằm
-nhâp#nhấp
-nủ#nhủ
-pú#bú
-sếnh#sến
-đựơc#được
-krom#cờ rom
-khêmara#khê ma ra
-phum#phun
-sampôt#sam bốt
-khrâm#khờ râm
-balamon#bà la môn
-trớc#trước
-xatra#sa tra
-chnăm#chờ năm
-oóc#óc
-boóc#bóc
-dơng#dương
-hiùnh#huỳnh
-neang#nang
-nuth#nút
-panth#ban
-pem#bem 
-nêang#nê ang

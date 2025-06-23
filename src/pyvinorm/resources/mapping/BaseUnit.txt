@@ -1,109 +1,109 @@
-s#giây
-giây#giây
-ngày#ngày
-m#mét
-mét#mét
-nm#na nô mét
-g#gam
 ampe#am be
-mol#mon
-cd#can đê la
-N#Niu tơn
-Pa#bát can
 atm#át mót phe
-đ#đồng
-ha#héc ta
-h#giờ
-giờ#giờ
-tháng#tháng
-năm#năm
-kB#ki lô bai
-s#giây
-giây#giây
-đồng#đồng
-ml#mi li lít
-l#lít
-lít#lít
-gb#ghi ga bai
-mb#mê ga bai
-kb#ki lô bít
-kg#ki lô gam
-mg#mi li gam
-m3#mét khối
-km3#ki lô mét khối
-dm3#đề xi mét khối
-cc#xăng ti mét khối
-cm3#xăng ti mét khối
-m2#mét vuông
-km2#ki lô mét vuông
-dm2#đề xi mét vuông
-cm2#xăng ti mét vuông
-mm2#mi li mét vuông
-km#ki lô mét
-dm#đề xi mét
-cm#xăng ti mét
-mm#mi li mét
-nm#na nô mét
-mph#dặm một giờ
-ft#phuốt
-kn#hải lí một giờ
-Nm#niu tơn mét
-GN#gi ga niu tơn
-MN#mê ga niu tơn
-kN#ki lô niu tơn
-mN#mi li niu tơn
-j#giun
-kj#ki lô giun
-mj#mê ga giun
-gj#gi ga giun
-mw#mê ga oát
-kW#ki lo oát
-w#oát
-Wh#oát giời
-MWh#mê ga oát giờ
-kWh#ki lo oát giờ
-MeV#mê ga e lét tron vôn
-eV#e lét tron vôn
-Cal#ca lo
-kcal#ki lô ca lo
-°C#độ xê
-°F#độ ép
-°K#độ kê vin
-dp#đi ốp
-độ#độ
-Wb#ve bê
-điôp#đi ốp
 Bq#bét cơ ren
+°C#độ xê
+Cal#ca lo
+carat#ca ra
+carat#ca ra
+cc#xăng ti mét khối
+cd#can đê la
+chỉ#chỉ
+cm#xăng ti mét
+cm2#xăng ti mét vuông
+cm3#xăng ti mét khối
+công#công
 dB#đề xi ben
-min#phút
-sec#giây
-mmHg#mi li mét thủy ngân
+dm#đề xi mét
+dm2#đề xi mét vuông
+dm3#đề xi mét khối
+dp#đi ốp
+đ#đồng
+điôp#đi ốp
+độ#độ
+đồng#đồng
+eV#e lét tron vôn
+°F#độ ép
+ft#phuốt
+g#gam
+gal#ga lon
+gallon#ga lon
+gb#ghi ga bai
+giây#giây
+giây#giây
+giờ#giờ
+gj#gi ga giun
+GN#gi ga niu tơn
+h#giờ
+ha#héc ta
+hz#héc
+inch#in
+j#giun
+°K#độ kê vin
+kb#ki lô bít
+kB#ki lô bai
+kcal#ki lô ca lo
+kg#ki lô gam
+kj#ki lô giun
+km#ki lô mét
+km2#ki lô mét vuông
+km3#ki lô mét khối
+kn#hải lí một giờ
+kN#ki lô niu tơn
+kW#ki lo oát
+kWh#ki lo oát giờ
+l#lít
+lb#bao
+lít#lít
+lượng#lượng
+m#mét
+m2#mét vuông
+m3#mét khối
 mA#mi li âm be
+mẫu#mẫu
+mb#mê ga bai
+mét#mét
+MeV#mê ga e lét tron vôn
+mg#mi li gam
+min#phút
+mj#mê ga giun
+ml#mi li lít
+mm#mi li mét
+mm2#mi li mét vuông
+mmHg#mi li mét thủy ngân
+mN#mi li niu tơn
+MN#mê ga niu tơn
+mol#mon
+mph#dặm một giờ
+mw#mê ga oát
+MWh#mê ga oát giờ
+N#Niu tơn
+năm#năm
+ngày#ngày
+nm#na nô mét
+nm#na nô mét
+Nm#niu tơn mét
+ounce#ao
+oz#ao
+Pa#bát can
+ph#phút
+pound#bao
 rad#ra đi an
 radian#ra đi an
-hz#héc
-tấn#tấn
-lb#bao
-oz#ao
-ounce#ao
-pound#bao
-carat#ca ra
-carat#ca ra
-gallon#ga lon
-gal#ga lon
-inch#in
-vnđ#việt nam đồng
-vnd#việt nam đồng
 rm#ring git
 rub#rúp
-chỉ#chỉ
-lượng#lượng
-sào#sào
-công#công
-mẫu#mẫu
-yến#yến
-tạ#tạ
-vg#vòng
-vòng#vòng
-ph#phút
+s#giây
+s#giây
 s2#giây bình phương
+sào#sào
+sec#giây
+tạ#tạ
+tấn#tấn
+tháng#tháng
+vg#vòng
+vnd#việt nam đồng
+vnđ#việt nam đồng
+vòng#vòng
+w#oát
+Wb#ve bê
+Wh#oát giời
+yến#yến

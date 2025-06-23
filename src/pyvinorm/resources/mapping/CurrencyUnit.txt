@@ -1,10 +1,10 @@
 %#phần trăm
 $#đô la mỹ
-€#ê rô
 £#bảng
 ¥#yên
+฿#bạc
 ₩#won
+€#ê rô
 ₭#kíp
 ₱#bê xô
-฿#bạc
 Ω#ôm

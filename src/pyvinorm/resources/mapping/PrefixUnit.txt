@@ -1,20 +1,20 @@
-d#đề xi
+a#át tô
 c#xăng ti
+d#đề xi
+da#đề ca
+E#ét tra
+f#phêm tô
+G#ghi ga
+h#héc tô
+k#ki lô
 m#mi li
-μ#mi cờ rô
+M#mê ga
 n#na nô
 p#pi cô
-f#phêm tô
-a#át tô
-z#zép tô
-y#dóc tô
-Y#dót ta
-Z#giết ta
-E#ét tra
 P#pê ta
 T#tê ra
-G#ghi ga
-M#mê ga
-k#ki lô
-h#héc tô
-da#đề ca
+y#dóc tô
+Y#dót ta
+z#zép tô
+Z#giết ta
+μ#mi cờ rô
