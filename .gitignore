@@ -12,3 +12,8 @@ wheels/
 # IDEs
 .vscode/
 .idea/
+
+# Development tools
+devs/
+*.coverage
+.coverage.*
