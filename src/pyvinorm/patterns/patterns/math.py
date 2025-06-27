@@ -152,8 +152,7 @@ class MeasurementUSPattern(BaseMeasurementPattern):
                     f"Unit '{unit2}' not found in mapping. Please check the unit mapping."
                 )
 
-        if matcher.group(4).strip() == "-":
-            result += " đến"
+        result += matcher.group(4).replace("-", " đến")
         return result
 
 
@@ -190,8 +189,7 @@ class MeasurementOtherVNPattern(BaseMeasurementPattern):
             if unit_mapping.contains(unit):
                 result += " " + unit_mapping.get(unit)
 
-        if matcher.group(3).strip() == "-":
-            result += " đến"
+        result += matcher.group(3).replace("-", " đến")
 
         return result
 
@@ -213,8 +211,7 @@ class MeasurementOtherUSPattern(BaseMeasurementPattern):
             if unit_mapping.contains(unit):
                 result += " " + unit_mapping.get(unit)
 
-        if matcher.group(3).strip() == "-":
-            result += " đến"
+        result += matcher.group(3).replace("-", " đến")
 
         return result
 
