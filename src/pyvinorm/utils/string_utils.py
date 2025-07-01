@@ -1,4 +1,3 @@
-import re
 import regex
 import string
 from pyvinorm.managers import Mapping
@@ -16,7 +15,7 @@ def replace_nonvoice_symbols(text: str, repl: str = "") -> str:
     Remove non-voice symbols from the text.
     """
     # Define a regex pattern to match non-voice symbols
-    pattern = re.compile(r"(“|”|\.\.\.|\"|\'|\{|\}|\[|\]|\(|\))")
+    pattern = regex.compile(r"(“|”|\.\.\.|\"|\'|\{|\}|\[|\]|\(|\))")
     return pattern.sub(repl, text)
 
 
