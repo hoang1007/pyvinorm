@@ -6,6 +6,7 @@ from pyvinorm.managers import MappingManager, init_resources
 from pyvinorm.utils.string_utils import (
     remove_white_space,
     replace_nonvoice_symbols,
+    normalize_character,
 )
 
 logging.basicConfig(level=logging.INFO)
@@ -44,7 +45,8 @@ class ViNormalizer:
         teencode_mapping = MappingManager.get_mapping("Teencode")
         symbol_mapping = MappingManager.get_mapping("Symbol")
 
-        normalized_text = remove_white_space(text)
+        normalized_text = normalize_character(text)
+        normalized_text = remove_white_space(normalized_text)
 
         # Step 1: Normalize text using regex patterns
         normalized_text = self.pattern_handler.normalize(normalized_text)

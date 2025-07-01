@@ -33,6 +33,20 @@ def is_valid(text: str) -> bool:
     return (pattern.fullmatch(text) is not None) and (len(text) > 0)
 
 
+def normalize_character(text: str) -> str:
+    """
+    Normalize character to its standard form.
+    """
+    return (
+        text.replace("–", "-")
+        .replace("…", "...")
+        .replace("“", '"')
+        .replace("”", '"')
+        .replace("‘", "'")
+        .replace("’", "'")
+    )
+
+
 # def contain_only_letters(text: str, letter_mapping: Mapping) -> bool:
 #     for c in text.lower():
 #         if not letter_mapping.contains(c):
