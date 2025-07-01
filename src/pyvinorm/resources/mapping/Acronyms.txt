@@ -1477,7 +1477,6 @@ hvcnttđl#học viện công nghiệp thông tin đài loan
 hvđ#hỏi và đáp
 hvhcqg#học viện hành chính quốc gia
 hvkhqs#học viện khoa học quân sự
-hvl#
 hvlq#học viện lục quân
 hvnclc#hàng việt nam chất lượng cao
 hvnh#học viện ngân hàng
