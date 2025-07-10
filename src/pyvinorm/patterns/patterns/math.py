@@ -88,7 +88,7 @@ class MeasurementVNPattern(BaseMeasurementPattern):
         return super().get_priority() + 20
 
     def get_regex_pattern(self):
-        return r"(?i)\b(\d+(?:\.\d{3})+(?:,\d+)?)\s?([°|\p{Alphabetic}]+[2|3]?)(?:\/(\p{Alphabetic}+[2|3]?))?(?:\b|$)"
+        return r"(?i)\b(\d+(?:\.\d{3})+(?:,\d+)?)\s?([°\p{Alphabetic}]+[23]?)(?:\/(\p{Alphabetic}+[23]?))?(?:\b|$)"
 
     def handle_match(self, matcher):
         unit_mapping = MappingManager.get_mapping("BaseUnit")
@@ -125,7 +125,7 @@ class MeasurementUSPattern(BaseMeasurementPattern):
         return super().get_priority() + 20
 
     def get_regex_pattern(self):
-        return r"(?i)\b(\d+(?:,\d{3})+(?:\.\d+)?)\s?([°|\p{Alphabetic}]+[2|3]?)(?:\/(\p{Alphabetic}+[2|3]?))?(?:\b|$)(-?)"
+        return r"(?i)\b(\d+(?:,\d{3})+(?:\.\d+)?)\s?([°\p{Alphabetic}]+[23]?)(?:\/(\p{Alphabetic}+[23]?))?(?:\b|$)(-?)"
 
     def handle_match(self, matcher):
         unit_mapping = MappingManager.get_mapping("BaseUnit")
@@ -159,14 +159,14 @@ class MeasurementUSPattern(BaseMeasurementPattern):
 @register_pattern
 class MeasurementVN1Pattern(MeasurementVNPattern):
     def get_regex_pattern(self):
-        return r"(?i)\b(\d+(?:,\d+))\s?([°|\p{Alphabetic}]+[2|3]?)(?:\/(\p{Alphabetic}+[2|3]?))?(?:\b|$)(-?)"
+        return r"(?i)\b(\d+(?:,\d+))\s?([°\p{Alphabetic}]+[23]?)(?:\/(\p{Alphabetic}+[23]?))?(?:\b|$)(-?)"
 
 
 @register_pattern
 class MeasurementUS1Pattern(MeasurementUSPattern):
     def get_regex_pattern(self):
         # return r"(?i)\b(\d+(?:\.\d+)?)\s?([°|\p{Alphabetic}]+[2|3]?)(?:\/(\p{Alphabetic}+[2|3]?))?(?:\b|$)(-?)"
-        return r"(?i)\b(\d+(?:\.\d+)?)\s?([°|\p{Alphabetic}]+[2|3]?)(?:\/(\p{Alphabetic}+[2|3]?))?(?:\b|$)(\s?-?)"
+        return r"(?i)\b(\d+(?:\.\d+)?)\s?([°\p{Alphabetic}]+[23]?)(?:\/(\p{Alphabetic}+[23]?))?(?:\b|$)(\s?-?)"
 
 
 @register_pattern
