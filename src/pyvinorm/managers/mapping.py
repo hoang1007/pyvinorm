@@ -1,6 +1,6 @@
 import logging
 
-from typing import Dict, Optional
+from typing import Dict, Optional, Tuple
 from threading import Lock, Thread
 from .lm import LanguageModelManager
 
@@ -101,6 +101,9 @@ class Mapping:
         :return: True if the key exists, False otherwise.
         """
         return key in self.__map
+    
+    def get_keys(self) -> Tuple[str]:
+        return self.__map.keys()
 
 
 class MappingManager:
