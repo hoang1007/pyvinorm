@@ -184,10 +184,9 @@ class MeasurementOtherVNPattern(BaseMeasurementPattern):
             number, decimal_delimiter=",", thousands_delimiter="."
         )
 
-        if matcher.groupCount() > 1:
-            unit = matcher.group(2)
-            if unit_mapping.contains(unit):
-                result += " " + unit_mapping.get(unit)
+        unit = matcher.group(2)
+        if unit_mapping.contains(unit):
+            result += " " + unit_mapping.get(unit)
 
         result += matcher.group(3).replace("-", " đến")
 
@@ -206,10 +205,9 @@ class MeasurementOtherUSPattern(BaseMeasurementPattern):
             number, decimal_delimiter=".", thousands_delimiter=","
         )
 
-        if matcher.groupCount() > 1:
-            unit = matcher.group(2)
-            if unit_mapping.contains(unit):
-                result += " " + unit_mapping.get(unit)
+        unit = matcher.group(2)
+        if unit_mapping.contains(unit):
+            result += " " + unit_mapping.get(unit)
 
         result += matcher.group(3).replace("-", " đến")
 
