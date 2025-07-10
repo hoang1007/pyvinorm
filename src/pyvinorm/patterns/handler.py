@@ -32,7 +32,7 @@ class PatternHandler:
             start, end = matcher.span()
             result += text[last_pos:start]
             try:
-                repl = pattern.handle_match(matcher)
+                repl = pattern.handle_match(matcher) + " "
             except Exception as e:
                 logger.error(f"Error handling match for pattern {pattern.__class__.__name__}: {e}")
                 repl = matcher.group()  # Fallback to original match if error occurs
