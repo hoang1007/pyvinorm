@@ -2,6 +2,7 @@ import logging
 
 import regex
 from pyvinorm.patterns.handler import PatternHandler
+from pyvinorm.keyword_replacer import KeywordReplacer
 from pyvinorm.managers import MappingManager, init_resources
 from pyvinorm.utils.string_utils import (
     remove_white_space,
@@ -37,6 +38,13 @@ class ViNormalizer:
 
         self.pattern_handler = PatternHandler()
 
+        custom_mapping = MappingManager.get_mapping("Custom")
+        self.keyword_replacer = KeywordReplacer(
+            keyword_mapping={
+                k: custom_mapping.get(k) for k in custom_mapping.get_keys()
+            }
+        )
+
     def normalize(self, text: str) -> str:
         """
         Normalize the input text using defined patterns and mappings.
@@ -55,7 +63,10 @@ class ViNormalizer:
             normalized_text = remove_white_space(normalized_text)
             return normalized_text
 
-        # Step 2: Check whether normalized text still contains parts
+        # Step 2: Apply custom normalization rules for wwords/phrases
+        normalized_text = self.keyword_replacer(normalized_text)
+
+        # Step 3: Check whether normalized text still contains parts
         # that aren't converted to spoken forms.
         normalized_text = replace_nonvoice_symbols(normalized_text, repl="")
         symbol_pattern = regex.compile(r"[^\w\d\s]")
@@ -79,7 +90,7 @@ class ViNormalizer:
             else:
                 result += " " + token
 
-        # Step 3: Postprocess the result
+        # Step 4: Postprocess the result
         result = remove_white_space(result.lstrip())
 
         if self.downcase:

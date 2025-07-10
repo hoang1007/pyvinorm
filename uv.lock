@@ -163,6 +163,12 @@ wheels = [
 ]
 
 [[package]]
+name = "flashtext"
+version = "2.7"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/81/d8/2cd0656eae456d615c2f1efbcae8dfca2cb871a31f34ba8925aba47d5e09/flashtext-2.7.tar.gz", hash = "sha256:a1be2b93e09d4f0deee4aad72b91a7127b61fb8b8034ca9a9c78ea745d8b05cf", size = 14536, upload-time = "2018-02-16T05:24:17.232Z" }
+
+[[package]]
 name = "idna"
 version = "3.10"
 source = { registry = "https://pypi.org/simple" }
@@ -250,6 +256,7 @@ name = "pyvinorm"
 version = "0.2.0"
 source = { editable = "." }
 dependencies = [
+    { name = "flashtext" },
     { name = "kenlm" },
     { name = "regex" },
     { name = "requests" },
@@ -263,6 +270,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "flashtext", specifier = ">=2.7" },
     { name = "kenlm", specifier = ">=0.3.0" },
     { name = "regex", specifier = ">=2024.11.6" },
     { name = "requests", specifier = ">=2.32.4" },
