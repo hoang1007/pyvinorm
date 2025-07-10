@@ -180,6 +180,8 @@ class WebsitePattern(BaseSpecialPattern):
         # 1. Convert protocol (https://) to spoken form
         for c in protocol:
             match c:
+                case ".":
+                    result += " chấm"
                 case ":":
                     result += " hai chấm"
                 case "/":
