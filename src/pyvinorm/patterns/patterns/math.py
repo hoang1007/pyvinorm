@@ -92,7 +92,7 @@ class MeasurementVNPattern(BaseMeasurementPattern):
         # 20.000.0000(,1234) triệu
         # 1.0000 km2/h
         # () means optional.
-        return r"(?i)\b(\d+(?:\.\d{3})+(?:,\d+)?)\s?([°\p{Alphabetic}]+[23]?)(?:\/(\p{Alphabetic}+[23]?))?(?:\b|$)"
+        return r"(?i)\b(\d+(?:\.\d{3})+(?:,\d+)?)\s?([°\p{Alphabetic}\s]+[23]?)(?:\/([\p{Alphabetic}\s]+[23]?))?(?:\b|$)"
 
     def handle_match(self, matcher):
         unit_mapping = MappingManager.get_mapping("BaseUnit")
@@ -133,7 +133,7 @@ class MeasurementUSPattern(BaseMeasurementPattern):
         # 20,000,0000(.1234) triệu
         # 1,0000 km2/h
         # () means optional.
-        return r"(?i)\b(\d+(?:,\d{3})+(?:\.\d+)?)\s?([°\p{Alphabetic}]+[23]?)(?:\/(\p{Alphabetic}+[23]?))?(?:\b|$)(-?)"
+        return r"(?i)\b(\d+(?:,\d{3})+(?:\.\d+)?)\s?([°\p{Alphabetic}\s]+[23]?)(?:\/([\p{Alphabetic}\s]+[23]?))?(?:\b|$)(-?)"
 
     def handle_match(self, matcher):
         unit_mapping = MappingManager.get_mapping("BaseUnit")
@@ -171,7 +171,7 @@ class MeasurementVN1Pattern(MeasurementVNPattern):
         # 20000,1234 triệu
         # 10000,12 km2/h
         # () means optional.
-        return r"(?i)\b(\d+(?:,\d+))\s?([°\p{Alphabetic}]+[23]?)(?:\/(\p{Alphabetic}+[23]?))?(?:\b|$)(-?)"
+        return r"(?i)\b(\d+(?:,\d+))\s?([°\p{Alphabetic}\s]+[23]?)(?:\/([\p{Alphabetic}\s]+[23]?))?(?:\b|$)(-?)"
 
 
 @register_pattern
@@ -182,7 +182,7 @@ class MeasurementUS1Pattern(MeasurementUSPattern):
         # 10000.12 km2/h
         # () means optional.
         # return r"(?i)\b(\d+(?:\.\d+)?)\s?([°|\p{Alphabetic}]+[2|3]?)(?:\/(\p{Alphabetic}+[2|3]?))?(?:\b|$)(-?)"
-        return r"(?i)\b(\d+(?:\.\d+)?)\s?([°\p{Alphabetic}]+[23]?)(?:\/(\p{Alphabetic}+[23]?))?(?:\b|$)(\s?-?)"
+        return r"(?i)\b(\d+(?:\.\d+)?)\s?([°\p{Alphabetic}\s]+[23]?)(?:\/([\p{Alphabetic}\s]+[23]?))?(?:\b|$)(\s?-?)"
 
 
 @register_pattern
