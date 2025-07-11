@@ -1,3 +1,4 @@
+from typing import Set
 import regex
 
 
@@ -26,3 +27,18 @@ class BasePattern:
         :return: An integer representing the priority.
         """
         return 0
+
+    def get_tags(self) -> Set[str]:
+        """
+        Get the tags associated with the pattern.
+
+        :return: A set of tags.
+        """
+        return set()
+
+    @property
+    def tags(self) -> Set[str]:
+        """
+        Tags associated with the pattern.
+        """
+        return self.get_tags() | {"default"}

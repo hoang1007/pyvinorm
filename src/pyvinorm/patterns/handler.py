@@ -22,6 +22,9 @@ class PatternHandler:
                 reverse=True,
             )
         }
+        self.pattern_tags = set()
+        for pattern in self.patterns.values():
+            self.pattern_tags.update(pattern.tags)
 
     def _normalize(self, text: str, pattern: BasePattern):
         regex_pattern = regex.compile(pattern.get_regex_pattern())
@@ -41,13 +44,24 @@ class PatternHandler:
         result += text[last_pos:]
         return result
 
-    def normalize(self, text: str) -> str:
+    def normalize(self, text: str, tag: str) -> str:
         """
         Normalize the text to a standard format.
         """
+        if tag not in self.pattern_tags:
+            raise ValueError(
+                f"Tag '{tag}' is not valid. Available tags: {self.pattern_tags}"
+            )
+
+        patterns_to_apply = {
+            pattern_id: pattern
+            for pattern_id, pattern in self.patterns.items()
+            if tag in pattern.tags
+        }
+
         result = text
 
-        for pattern_id, pattern in self.patterns.items():
+        for pattern_id, pattern in patterns_to_apply.items():
             result = self._normalize(result, pattern)
 
         return result

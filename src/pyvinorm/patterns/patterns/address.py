@@ -9,8 +9,18 @@ from ..base import BasePattern
 logger = logging.getLogger(__name__)
 
 
+class BaseAddressPattern(BasePattern):
+    """
+    Base class for address patterns.
+    This class provides a common interface for address patterns.
+    """
+
+    def get_tags(self):
+        return {"address", "location"}
+
+
 @register_pattern
-class PoliticalDivisionPattern(BasePattern):
+class PoliticalDivisionPattern(BaseAddressPattern):
     def get_regex_pattern(self):
         return r"(?i)\b(kp|q|p|h|tx|tp|x|t)\s?[.]\s?"
 
@@ -49,7 +59,7 @@ class PoliticalDivisionPattern(BasePattern):
 
 
 @register_pattern
-class StreetPattern(BasePattern):
+class StreetPattern(BaseAddressPattern):
     def get_regex_pattern(self):
         return r"(?i)\b(đường|số|số nhà|nhà|địa chỉ|tọa lạc|xã|thôn|ấp|khu phố|căn hộ|cư xá|Đ\/c)[\s:]\s?[^\s]*\d[^\s]*(\b|$)"
 
@@ -99,7 +109,7 @@ class StreetPattern(BasePattern):
 
 
 @register_pattern
-class OfficePattern(BasePattern):
+class OfficePattern(BaseAddressPattern):
     def get_regex_pattern(self):
         return r"(?i)(phòng|lớp|đơn vị)\s[^\s]*\d[^\s]*(\b|$)"
 
@@ -149,7 +159,10 @@ class OfficePattern(BasePattern):
 
 
 @register_pattern
-class CodeNumberPattern(BasePattern):
+class CodeNumberPattern(BaseAddressPattern):
+    def get_tags(self):
+        return super().get_tags() | {"address_code"}
+
     def get_regex_pattern(self):
         return r"(?i)(\b|^)[^\s]*\d[^\s]*\b"
 

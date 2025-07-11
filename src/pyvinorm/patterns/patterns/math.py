@@ -10,6 +10,9 @@ from ..base import BasePattern
 
 @register_pattern
 class DecimalVNPattern(BasePattern):
+    def get_tags(self):
+        return {"decimal", "number"}
+
     def get_priority(self):
         return super().get_priority() + 10
 
@@ -57,6 +60,9 @@ class DecimalUS1Pattern(DecimalUSPattern):
 
 @register_pattern
 class RomanPattern(BasePattern):
+    def get_tags(self):
+        return {"number", "roman"}
+
     def get_regex_pattern(self):
         return r"(?i)(\b|^)(thứ|lần|kỷ|kỉ|kì|kỳ|khóa)\s+[V|I|X]{1,5}(\b|$)"
 
@@ -74,6 +80,9 @@ class RomanPattern(BasePattern):
 
 
 class BaseMeasurementPattern(BasePattern):
+    def get_tags(self):
+        return {"measurement", "money", "currency"}
+
     def get_priority(self):
         # These patterns be collide with decimal patterns
         # so we set a higher priority to ensure they are matched first

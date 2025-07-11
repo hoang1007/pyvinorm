@@ -14,6 +14,9 @@ class BaseTimePattern(BasePattern):
     It should be extended by specific time patterns.
     """
 
+    def get_tags(self):
+        return {"time", "date", "datetime"}
+
     def get_priority(self):
         # Since pattern of date time is at the format "dd/mm"
         # It often collides with other patterns such as

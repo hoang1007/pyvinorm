@@ -22,6 +22,9 @@ class BaseSpecialPattern(BasePattern):
 
 @register_pattern
 class PhoneNumberPattern(BaseSpecialPattern):
+    def get_tags(self):
+        return {"phone_number", "sdt", "sđt"}
+
     def get_regex_pattern(self):
         # This matches formats like:
         # +84 123 456 7890, +1.800.555.1234
@@ -86,6 +89,9 @@ class PhoneNumber3Pattern(PhoneNumberPattern):
 
 @register_pattern
 class EmailPattern(BaseSpecialPattern):
+    def get_tags(self):
+        return {"email"}
+
     def get_regex_pattern(self):
         return r"[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*"
 
@@ -139,6 +145,9 @@ class EmailPattern(BaseSpecialPattern):
 
 @register_pattern
 class WebsitePattern(BaseSpecialPattern):
+    def get_tags(self):
+        return {"website", "url"}
+
     def get_regex_pattern(self):
         return r"(?i)\b(https?:\/\/|ftp:\/\/|www\.|[^\s:=]+@www\.)?((\w+)\.)+(?:com|au\.uk|co\.in|net|org|info|coop|int|co\.uk|org\.uk|ac\.uk|uk)([\.\/][^\s]*)*([^(w|\d)]|$)"
 
@@ -222,6 +231,9 @@ class Website1Pattern(WebsitePattern):
 
 @register_pattern
 class FootballUnderAgePattern(BaseSpecialPattern):
+    def get_tags(self):
+        return {"football", "soccer"}
+
     def get_regex_pattern(self):
         # This matches football under the age patterns like:
         # "U19", "U21", "U23", "U17"
@@ -238,6 +250,9 @@ class FootballUnderAgePattern(BaseSpecialPattern):
 
 @register_pattern
 class FootballTeamPattern(BaseSpecialPattern):
+    def get_tags(self):
+        return {"football", "soccer", "sport"}
+
     def get_regex_pattern(self):
         return r"(?i)[đ]ội hình \b\d\s?-\s?\d\s?-\s?\d(-\s?\d)?\b"
 
@@ -269,6 +284,9 @@ class FootballTeamPattern(BaseSpecialPattern):
 
 @register_pattern
 class FootballScorePattern(BaseSpecialPattern):
+    def get_tags(self):
+        return {"football", "soccer", "sport"}
+
     def get_regex_pattern(self):
         return r"(?i)(?:tỉ|tỷ) số \b\d{1,2}\s?[-|]\s?\d{1,2}\b"
 

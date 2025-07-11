@@ -45,10 +45,7 @@ class ViNormalizer:
             }
         )
 
-    def normalize(self, text: str) -> str:
-        """
-        Normalize the input text using defined patterns and mappings.
-        """
+    def _normalize(self, text: str, tag: str = "default") -> str:
         acronym_mapping = MappingManager.get_mapping("Acronyms")
         teencode_mapping = MappingManager.get_mapping("Teencode")
         symbol_mapping = MappingManager.get_mapping("Symbol")
@@ -57,7 +54,7 @@ class ViNormalizer:
         normalized_text = remove_white_space(normalized_text)
 
         # Step 1: Normalize text using regex patterns
-        normalized_text = self.pattern_handler.normalize(normalized_text)
+        normalized_text = self.pattern_handler.normalize(normalized_text, tag)
 
         if self.regex_only:
             normalized_text = remove_white_space(normalized_text)
@@ -95,5 +92,49 @@ class ViNormalizer:
 
         if self.downcase:
             result = result.lower()
+
+        return result
+
+    def normalize(self, text: str) -> str:
+        """
+        Normalize the input text using defined patterns and mappings.
+        """
+        parsed_texts = self._parse_text(text)
+        result = ""
+
+        for item in parsed_texts:
+            result += self._normalize(item["content"], tag=item["tag"]) + " "
+        
+        result = remove_white_space(result)
+        return result
+
+    def _parse_text(self, text: str) -> str:
+        """
+        Parse text contain tags.
+
+        :param text: Input text that may contain tags.
+        :return: Parsed text with tags preserved in format:
+
+        >>> out
+        [
+            {"tag": "default", "content": "text"},
+            {"tag": "tag_name", "content": "text"},
+            ...
+        ]
+        """
+        tag_pattern = regex.compile(r"<(?P<tag>\w+)[^>]*?>(?P<content>.*?)</\1>")
+
+        result = []
+        last_end = 0
+        for match in tag_pattern.finditer(text):
+            start, end = match.span()
+            result.append({"tag": "default", "content": text[last_end:start]})
+            result.append(
+                {"tag": match.group("tag"), "content": match.group("content")}
+            )
+            last_end = end
+        end_str = text[last_end:]
+        if len(end_str) > 0:
+            result.append({"tag": "default", "content": end_str})
 
         return result
