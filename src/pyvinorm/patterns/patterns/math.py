@@ -186,6 +186,15 @@ class MeasurementUS1Pattern(MeasurementUSPattern):
 
 
 @register_pattern
+class MeasurementIntPattern(MeasurementVNPattern):
+    def get_regex_pattern(self):
+        # This matches patterns such as:
+        # 20 giao dịch/ngày
+        # 20 triệu/giao dịch
+        return r"(?i)\b(\d+)\s?([°\p{Alphabetic}\s]+[23]?)(?:\/([\p{Alphabetic}\s]+[23]?))?(?:\b|$)(\s?-?)"
+
+
+@register_pattern
 class MeasurementOtherVNPattern(BaseMeasurementPattern):
     def get_priority(self):
         return super().get_priority() + 20
