@@ -53,11 +53,18 @@ class PatternHandler:
                 f"Tag '{tag}' is not valid. Available tags: {self.pattern_tags}"
             )
 
-        patterns_to_apply = {
-            pattern_id: pattern
-            for pattern_id, pattern in self.patterns.items()
-            if tag in pattern.tags
-        }
+        if tag == "default":
+            patterns_to_apply = {
+                pattern_id: pattern
+                for pattern_id, pattern in self.patterns.items()
+                if pattern.is_enabled_by_default()
+            }
+        else:
+            patterns_to_apply = {
+                pattern_id: pattern
+                for pattern_id, pattern in self.patterns.items()
+                if tag in pattern.tags
+            }
 
         result = text
 

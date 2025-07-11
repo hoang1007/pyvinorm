@@ -36,6 +36,15 @@ class BasePattern:
         """
         return set()
 
+    def is_enabled_by_default(self):
+        """
+        Whether the pattern is enabled by default.
+        If True, the pattern will be used in normalization,
+        otherwise it will be skipped unless explicitly specified via tag.
+        Default is True.
+        """
+        return True
+
     @property
     def tags(self) -> Set[str]:
         """
