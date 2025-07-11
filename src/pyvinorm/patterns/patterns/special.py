@@ -315,3 +315,31 @@ class FootballScorePattern(BaseSpecialPattern):
             result = result.strip() + " " + NumberConverter.convert_number(number)
         return result
 
+
+@register_pattern
+class CodePattern(BasePattern):
+    def get_tags(self):
+        return {"code"}
+
+    def is_enabled_by_default(self):
+        return False
+
+    def get_regex_pattern(self):
+        return r"\b[A-Z\d]{4,}(?:-[A-Z\d]{4,})?\b"
+
+    def handle_match(self, matcher):
+        lettersound_mapping = MappingManager.get_mapping("LetterSoundVN")
+
+        match = matcher.group()
+        result = ""
+
+        for c in match:
+            if c.isdigit():
+                result += "," + NumberConverter.convert_number(c)
+            elif c.isalpha():
+                c_lower = c.lower()
+                result += "," + lettersound_mapping.get(c_lower, c_lower)
+            else:
+                result += "," + c
+
+        return result.lstrip(",")
