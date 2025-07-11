@@ -227,7 +227,7 @@ class CodeNumberPattern(BaseAddressPattern):
                     case " ":
                         result += c
                     case _:
-                        result += " " + lettersound_mapping.get(c, c)
+                        result += " " + lettersound_mapping.get(c.lower(), c)
 
         if len(number) > 0:
             result += " " + self._number_to_spoken(number)
