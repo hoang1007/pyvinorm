@@ -2,7 +2,7 @@
 &#và
 *#sao
 +#cộng
-/#xuyệt
+/#trên
 <#nhỏ hơn
 <>#khác
 =#bằng
