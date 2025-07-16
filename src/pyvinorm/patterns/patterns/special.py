@@ -22,6 +22,7 @@ class BaseSpecialPattern(BasePattern):
 
 @register_pattern
 class PhoneNumberPattern(BaseSpecialPattern):
+    DEFAULT_PAUSE = ","
     def get_tags(self):
         return {"phone_number", "sdt", "sđt"}
 
@@ -32,21 +33,67 @@ class PhoneNumberPattern(BaseSpecialPattern):
             r"([^(\w|\d|\.)]|^)((\+\d{1,3})|0)[-\s.]?\d{1,3}[-\s.]?\d{3}[-\s.]?\d{4}\b"
         )
 
+    def _split_phonenumber(self, phone_number: str):
+        # This method splits phone numbers into parts
+        # For example:
+        # 0345678913 -> 034 567 8913
+        # 19001234 -> 1900 1234
+        # 034 567 8913 -> 034 567 8913
+        # 034-567-8913 -> 034 567 8913
+        parts = []
+        if phone_number.isdigit():
+            # If the phone number is all digits, use default settings to split it
+            if len(phone_number) == 8:
+                parts.append(phone_number[:4])
+                parts.append(phone_number[4:])
+            elif len(phone_number) == 9:
+                parts.append(phone_number[:3])
+                parts.append(phone_number[3:6])
+                parts.append(phone_number[6:])
+            elif len(phone_number) == 10:
+                parts.append(phone_number[:3])
+                parts.append(phone_number[3:6])
+                parts.append(phone_number[6:])
+            elif len(phone_number) == 11:
+                parts.append(phone_number[:4])
+                parts.append(phone_number[4:7])
+                parts.append(phone_number[7:])
+            else:
+                # If the phone number is not in a valid format, return it as is
+                parts.append(phone_number)
+        else:
+            # If the phone number contains non-digit characters, split it by spaces or dashes
+            parts = regex.split(r"[-\s.]+", phone_number)
+            parts = [part for part in parts if part]  # Remove empty parts
+
+        return parts
+
     def handle_match(self, matcher):
         match = matcher.group()
         prefix = matcher.group(1)  # The character before the phone number
         match = match[len(prefix) :]
         result = ""
+        pause = self.DEFAULT_PAUSE
 
-        for c in match:
-            if c == "+":
-                result += " cộng"
-            elif c.isdigit():
-                result += " " + NumberConverter.convert_number(c)
-            # elif c in ".:-()":
-            #     pass
-            else:
-                result += " " + c
+        region_code = matcher.group(2)
+        if region_code.startswith("+"):
+            result = (
+                "cộng "
+                + " ".join([NumberConverter.convert_number(c) for c in region_code[1:]])
+                + pause
+            )
+        elif region_code.startswith("0"):
+            result = "không "
+        else:
+            raise ValueError(f"Invalid phone number region code: {region_code}")
+
+        match = match[len(region_code) :].strip()
+        pnum_parts = self._split_phonenumber(match)
+
+        for i, part in enumerate(pnum_parts):
+            if i > 0:
+                result += pause
+            result += " ".join([NumberConverter.convert_number(c) for c in part])
 
         return prefix + result.lstrip()
 
@@ -73,16 +120,44 @@ class PhoneNumber3Pattern(PhoneNumberPattern):
         # This matches hotline phone numbers like:
         # 1900 1234, 1900.0606.0909
         return r"\b1[89]00[\s\.]?[\d\s\.]{4,8}\b"
+    
+    def _split_phonenumber(self, phone_number: str):
+        # This method splits hotline phone numbers into parts
+        # For example:
+        # 19001234 -> 1900 1234
+        # 1900.0606.0909 -> 1900 0606 0909
+        parts = []
+        if phone_number.isdigit():
+            if len(phone_number) == 8:
+                parts.append(phone_number[:4])
+                parts.append(phone_number[4:])
+            elif len(phone_number) == 10:
+                parts.append(phone_number[:4])
+                parts.append(phone_number[4:7])
+                parts.append(phone_number[7:])
+            elif len(phone_number) == 12:
+                parts.append(phone_number[:4])
+                parts.append(phone_number[4:8])
+                parts.append(phone_number[8:])
+            else:
+                # If the phone number is not in a valid format, return it as is
+                parts.append(phone_number)
+        else:
+            parts = regex.split(r"[\s\.]+", phone_number)
+        
+        return parts
 
     def handle_match(self, matcher):
-        match = matcher.group()
+        match = matcher.group().strip()
         result = ""
+        pause = self.DEFAULT_PAUSE
 
-        for c in match:
-            if c.isdigit():
-                result += " " + NumberConverter.convert_number(c)
-            else:
-                result += " " + c
+        pnum_parts = self._split_phonenumber(match)
+
+        for i, part in enumerate(pnum_parts):
+            if i > 0:
+                result += pause
+            result += " ".join([NumberConverter.convert_number(c) for c in part])
 
         return result.lstrip()
 
