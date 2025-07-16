@@ -410,11 +410,11 @@ class CodePattern(BasePattern):
 
         for c in match:
             if c.isdigit():
-                result += "," + NumberConverter.convert_number(c)
+                result += " " + NumberConverter.convert_number(c)
             elif c.isalpha():
                 c_lower = c.lower()
-                result += "," + lettersound_mapping.get(c_lower, c_lower)
+                result += " " + lettersound_mapping.get(c_lower, c_lower)
             else:
-                result += "," + c
+                result += " " + c
 
-        return result.lstrip(",")
+        return result.lstrip()
