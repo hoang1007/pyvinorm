@@ -49,6 +49,7 @@ class ViNormalizer:
         acronym_mapping = MappingManager.get_mapping("Acronyms")
         teencode_mapping = MappingManager.get_mapping("Teencode")
         symbol_mapping = MappingManager.get_mapping("Symbol")
+        lettersound_mapping = MappingManager.get_mapping("LetterSoundVN")
 
         normalized_text = normalize_character(text)
         normalized_text = remove_white_space(normalized_text)
@@ -80,6 +81,8 @@ class ViNormalizer:
                 result += " " + teencode_mapping.get_with_context(token_lower, result, token_lower)
             elif symbol_mapping.contains(token):
                 result += " " + symbol_mapping.get(token)
+            elif len(token) == 1 and token.isalpha():
+                result += " " + lettersound_mapping.get(token_lower, token)
             elif token in (".", "!", ":", "?"):
                 result += " " + (token if self.keep_punctuation else ".")
             elif token in (",", ";", "/", "-"):
