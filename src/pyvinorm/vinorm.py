@@ -1,9 +1,10 @@
+from typing import Optional
 import logging
 
 import regex
 from pyvinorm.patterns.handler import PatternHandler
 from pyvinorm.keyword_replacer import KeywordReplacer
-from pyvinorm.managers import MappingManager, init_resources
+from pyvinorm.managers import MappingManager, Mapping, init_resources
 from pyvinorm.utils.string_utils import (
     remove_white_space,
     replace_nonvoice_symbols,
@@ -20,6 +21,7 @@ class ViNormalizer:
     :param bool regex_only: If True, only applies regex patterns without further normalization.
     :param bool keep_punctuation: If True, do not replace punctuation with dot or comma.
     :param bool downcase: If True, converts the text to lowercase after normalization.
+    :param str (optional) custom_mapping: Path to the configuration file that define custom pronunciation mapping.
 
     :return str: Normalized text in spoken form.
     """
@@ -29,6 +31,7 @@ class ViNormalizer:
         regex_only: bool = False,
         keep_punctuation: bool = False,
         downcase: bool = True,
+        custom_mapping: Optional[str] = None
     ):
         self.regex_only = regex_only
         self.keep_punctuation = keep_punctuation
@@ -38,10 +41,13 @@ class ViNormalizer:
 
         self.pattern_handler = PatternHandler()
 
-        custom_mapping = MappingManager.get_mapping("Custom")
+        custom_mapping_ = MappingManager.get_mapping("Custom")
+        if custom_mapping is not None:
+            custom_mapping_ = custom_mapping_.combine(Mapping.from_file(custom_mapping))
+
         self.keyword_replacer = KeywordReplacer(
             keyword_mapping={
-                k: custom_mapping.get(k) for k in custom_mapping.get_keys()
+                k: custom_mapping_.get(k) for k in custom_mapping_.get_keys()
             }
         )
 
