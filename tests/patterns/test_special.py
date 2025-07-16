@@ -5,35 +5,35 @@ from pyvinorm import ViNormalizer
 PHONE_NUMBER_TESTS = [
     (
         "Số điện thoại của tôi là +84 123 456 7890",
-        "Số điện thoại của tôi là cộng tám bốn một hai ba bốn năm sáu bảy tám chín không",
+        "Số điện thoại của tôi là cộng tám bốn , một hai ba , bốn năm sáu , bảy tám chín không",
     ),
     (
         "Liên hệ qua số 0123-456-789",
-        "Liên hệ qua số không một hai ba - bốn năm sáu - bảy tám chín",
+        "Liên hệ qua số không một hai ba , bốn năm sáu , bảy tám chín",
     ),
     (
         "Gọi cho tôi theo số +1.800.555.1234",
-        "Gọi cho tôi theo số cộng một . tám không không . năm năm năm . một hai ba bốn",
+        "Gọi cho tôi theo số cộng một , tám không không , năm năm năm , một hai ba bốn",
     ),
     (
         "0 24 24 24 24",
-        "không hai bốn hai bốn hai bốn hai bốn",
+        "không hai bốn , hai bốn , hai bốn , hai bốn",
     ),
     (
         "+84 12 34 56 789",
-        "cộng tám bốn một hai ba bốn năm sáu bảy tám chín",
+        "cộng tám bốn , một hai , ba bốn , năm sáu , bảy tám chín",
     ),
     (
         "1900 1234",
-        "một chín không không một hai ba bốn",
+        "một chín không không , một hai ba bốn",
     ),
     (
         "1800.1090",
-        "một tám không không . một không chín không",
+        "một tám không không , một không chín không",
     ),
     (
         "0908.144.144",
-        "không chín không tám . một bốn bốn . một bốn bốn",
+        "không chín không tám , một bốn bốn , một bốn bốn",
     ),
 ]
 
@@ -50,7 +50,7 @@ EMAIL_TESTS = [
     ),
     (
         "Hãy gửi email đến hòm thư: hoangvh@x88.org.vn",
-        "Hãy gửi email đến hòm thư : hoangvh a còng x tám tám chấm o rờ gờ chấm vi en",
+        "Hãy gửi email đến hòm thư : hoangvh a còng ích tám tám chấm o rờ gờ chấm vi en",
     ),
 ]
 
